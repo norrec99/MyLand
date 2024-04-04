@@ -5,8 +5,12 @@ using DG.Tweening;
 
 public class ProductPlantController : MonoBehaviour
 {
+    [SerializeField] private GameObject productPrefab;
+
     private bool isReadyToHarvest;
     private Vector3 originalScale;
+
+    private PlayerBagController playerBagController;
 
     private void Awake() 
     {
@@ -17,8 +21,9 @@ public class ProductPlantController : MonoBehaviour
     {
         if (other.CompareTag("Player") && isReadyToHarvest)
         {
+            playerBagController = other.GetComponent<PlayerBagController>();
+            playerBagController.AddProductToBag(productPrefab);
             StartCoroutine(HarvestProduct());
-            Debug.Log("Player Entered");
         }
     }
     IEnumerator HarvestProduct()

@@ -576,7 +576,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436863444}
-  m_LocalRotation: {x: 0.42415538, y: -0.00000001558191, z: 0.0000000072981776, w: 0.90558946}
+  m_LocalRotation: {x: 0.42415538, y: 0.000000015581922, z: -0.0000000072981816, w: 0.90558946}
   m_LocalPosition: {x: 0, y: 12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -781,11 +781,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6255164233581209395, guid: 967434eb2198b614e90104e4cd52daed, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.00000001558191
+      value: 0.000000015581922
       objectReference: {fileID: 0}
     - target: {fileID: 6255164233581209395, guid: 967434eb2198b614e90104e4cd52daed, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.0000000072981776
+      value: -0.0000000072981816
       objectReference: {fileID: 0}
     - target: {fileID: 6255164233620575296, guid: 967434eb2198b614e90104e4cd52daed, type: 3}
       propertyPath: joystickController
