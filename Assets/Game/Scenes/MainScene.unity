@@ -228,6 +228,7 @@ GameObject:
   - component: {fileID: 213641692}
   - component: {fileID: 213641691}
   - component: {fileID: 213641690}
+  - component: {fileID: 213641693}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -266,6 +267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   joystickController: {fileID: 1098104648}
+  playerAnimatorController: {fileID: 213641693}
   moveSpeed: 50
 --- !u!4 &213641692
 Transform:
@@ -283,6 +285,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &213641693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213641689}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 721edad7bf02ca247b8572faa0c4b475, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 1082856074095887338}
 --- !u!224 &309080682 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1320677200620010268, guid: 0a74b504a653a9641a183b5115f9b14b, type: 3}
@@ -652,6 +667,11 @@ Transform:
 --- !u!4 &1082856074095887337 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2220033241911223496, guid: 633994c3c750cf44eacf4a0001abc3f9, type: 3}
+  m_PrefabInstance: {fileID: 1281335271818880801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1082856074095887338 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 4209337931602756982, guid: 633994c3c750cf44eacf4a0001abc3f9, type: 3}
   m_PrefabInstance: {fileID: 1281335271818880801}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1281335271818880801

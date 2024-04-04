@@ -64,4 +64,8 @@ public class JoystickController : MonoBehaviour
     {
         return moveDirection;
     }
+    public bool CanMove()
+    {
+        return canControlJoystick; 
+    }
 }
