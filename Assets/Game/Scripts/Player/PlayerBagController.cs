@@ -7,15 +7,11 @@ public class PlayerBagController : MonoBehaviour
     [SerializeField] private Transform bag;
 
     private Vector3 productSize;
-    private List<GameObject> productList = new List<GameObject>();
+    private List<ProductData> productDataList = new List<ProductData>();
 
-    private void OnTriggerEnter(Collider other) 
+    public void AddProductToBag(ProductData productData)
     {
-
-    }
-    public void AddProductToBag(GameObject product)
-    {
-        GameObject productBox = Instantiate(product, Vector3.zero, Quaternion.identity);
+        GameObject productBox = Instantiate(productData.productPrefab, Vector3.zero, Quaternion.identity);
         productBox.transform.SetParent(bag);
 
         CalculateProductSize(productBox);
@@ -23,11 +19,11 @@ public class PlayerBagController : MonoBehaviour
         productBox.transform.localRotation = Quaternion.identity;
         productBox.transform.localPosition = Vector3.zero;
         productBox.transform.localPosition = new Vector3(0, yPosition, 0);
-        productList.Add(productBox);
+        productDataList.Add(productData);
     }
     private float CalculateNewYPositionOfBox()
     {
-        return productList.Count * productSize.y;
+        return productDataList.Count * productSize.y;
     }
     private void CalculateProductSize(GameObject product)
     {
