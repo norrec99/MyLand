@@ -312,4 +312,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   joystickOutline: {fileID: 1320677200128613730}
   joystickButton: {fileID: 1320677201922393571}
-  moveFactor: 500
+  moveFactor: 1

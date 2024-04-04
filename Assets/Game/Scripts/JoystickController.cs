@@ -45,10 +45,16 @@ public class JoystickController : MonoBehaviour
         Vector3 currentPosition = Input.mousePosition;
         Vector3 direction = currentPosition - tapPosition;
 
-        float moveMagnitude = direction.magnitude * moveFactor / Screen.width;
-        moveMagnitude = Mathf.Min(moveMagnitude, joystickOutline.rect.width / 2);
+        float canvasYScale = GetComponentInParent<Canvas>().GetComponent<RectTransform>().localScale.y;
+        float moveMagnitude = direction.magnitude * moveFactor * canvasYScale;
+
+        float joystickOutlineHalfWidth = joystickOutline.rect.width / 2;
+        float newWidth = joystickOutlineHalfWidth * canvasYScale;
+
+        moveMagnitude = Mathf.Min(moveMagnitude, newWidth);
 
         moveDirection = direction.normalized * moveMagnitude;
+
         Vector3 targetPosition = tapPosition + moveDirection;
         joystickButton.position = targetPosition;
 
@@ -62,7 +68,7 @@ public class JoystickController : MonoBehaviour
     }
     public Vector3 GetMovePosition()
     {
-        return moveDirection;
+        return moveDirection / 1.5f;
     }
     public bool CanMove()
     {
