@@ -18,7 +18,10 @@ public class JoystickController : MonoBehaviour
     }
     private void Update() 
     {
-        ControlJoystick();
+        if (canControlJoystick)
+        {
+            ControlJoystick();
+        }
     }
     public void TappedOnJoystickZone()
     {
@@ -35,6 +38,7 @@ public class JoystickController : MonoBehaviour
     {
         joystickOutline.gameObject.SetActive(false);
         canControlJoystick = false;
+        moveDirection = Vector3.zero;
     }
     public void ControlJoystick()
     {
@@ -55,5 +59,9 @@ public class JoystickController : MonoBehaviour
                 HideJoystick();
             }
         }
+    }
+    public Vector3 GetMovePosition()
+    {
+        return moveDirection;
     }
 }
