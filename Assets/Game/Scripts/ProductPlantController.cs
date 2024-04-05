@@ -22,11 +22,14 @@ public class ProductPlantController : MonoBehaviour
         if (other.CompareTag("Player") && isReadyToHarvest)
         {
             playerBagController = other.GetComponent<PlayerBagController>();
-            playerBagController.AddProductToBag(productData);
-            StartCoroutine(HarvestProduct());
+            if (playerBagController.IsEmptySpace())
+            {
+                playerBagController.AddProductToBag(productData);
+                StartCoroutine(HarvestProduct());
+            }
         }
     }
-    IEnumerator HarvestProduct()
+    private IEnumerator HarvestProduct()
     {
         isReadyToHarvest = false;
 
