@@ -18,6 +18,10 @@ public class PlayerBagController : MonoBehaviour
         {
             for (int i = productDataList.Count - 1; i >= 0; i--)
             {
+                if (GameManager.Instance != null)
+                {
+                    GameManager.Instance.AddCoin(productDataList[i].productPrice);
+                }
                 Destroy(bag.transform.GetChild(i).gameObject);
                 productDataList.RemoveAt(i);
             }
