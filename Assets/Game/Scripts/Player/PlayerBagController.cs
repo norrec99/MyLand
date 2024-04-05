@@ -7,7 +7,19 @@ public class PlayerBagController : MonoBehaviour
     [SerializeField] private Transform bag;
 
     private Vector3 productSize;
-    private List<ProductData> productDataList = new List<ProductData>();
+    public List<ProductData> productDataList = new List<ProductData>();
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if (other.CompareTag("ShopPoint"))
+        {
+            for (int i = productDataList.Count - 1; i >= 0; i--)
+            {
+                Destroy(bag.transform.GetChild(i).gameObject);
+                productDataList.RemoveAt(i);
+            }
+        }
+    }
 
     public void AddProductToBag(ProductData productData)
     {
