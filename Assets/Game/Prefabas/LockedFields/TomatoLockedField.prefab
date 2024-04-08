@@ -204,6 +204,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5379677415069285159}
+  - component: {fileID: 1503531915611624553}
+  - component: {fileID: 1416710590502632655}
   m_Layer: 0
   m_Name: LockedField
   m_TagString: Untagged
@@ -229,6 +231,35 @@ Transform:
   m_Father: {fileID: 5379677415867270217}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &1503531915611624553
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379677415069285158}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.9424908, y: 1.3792089, z: 3.6885939}
+  m_Center: {x: -0.012262464, y: 0.9190548, z: -0.06915712}
+--- !u!114 &1416710590502632655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5379677415069285158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91756fc002137a948aab371039a8c4d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  price: 10
+  priceText: {fileID: 5379677416040707271}
+  lockedUnit: {fileID: 5379677415069285158}
+  unlockedUnit: {fileID: 5379677415893649908}
 --- !u!1 &5379677415867270222
 GameObject:
   m_ObjectHideFlags: 0
@@ -238,8 +269,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5379677415867270217}
-  - component: {fileID: 5379677415867270216}
-  - component: {fileID: 5379677415867270223}
   m_Layer: 0
   m_Name: TomatoLockedField
   m_TagString: Untagged
@@ -264,35 +293,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5379677415867270216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379677415867270222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 91756fc002137a948aab371039a8c4d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  price: 10
-  priceText: {fileID: 5379677416040707271}
-  lockedUnit: {fileID: 5379677415069285158}
-  unlockedUnit: {fileID: 5379677415893649908}
---- !u!65 &5379677415867270223
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5379677415867270222}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.9424908, y: 1.3792089, z: 3.6885939}
-  m_Center: {x: -0.012262464, y: 0.9190548, z: -0.06915712}
 --- !u!1 &5379677415893649908
 GameObject:
   m_ObjectHideFlags: 0
