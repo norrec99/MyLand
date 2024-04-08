@@ -10,6 +10,10 @@ public class PlayerMovementController : MonoBehaviour
 
     private Vector3 moveVector;
 
+    private float gravity = -9.81f;
+    private float gravityMultiplier = 3f;
+    private float gravityVelocity;
+
     private CharacterController characterController;
 
     private void Awake() 
@@ -27,8 +31,21 @@ public class PlayerMovementController : MonoBehaviour
         moveVector.z = moveVector.y;
         moveVector.y = 0;
 
-        characterController.Move(moveVector);
         playerAnimatorController.ManageAnimations(moveVector);
+        ApplyGravity();
+        characterController.Move(moveVector);
+    }
+    private void ApplyGravity()
+    {
+        if (characterController.isGrounded && gravityVelocity < 0f)
+        {
+            gravityVelocity = -1f;
+        }
+        else
+        {
+            gravityVelocity += gravity * gravityMultiplier * Time.deltaTime;
+            moveVector.y = gravityVelocity;
+        }
     }
 
 }
