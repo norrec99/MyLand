@@ -15,10 +15,12 @@ public class PlayerMovementController : MonoBehaviour
     private float gravityVelocity;
 
     private CharacterController characterController;
+    public static PlayerMovementController Instance;
 
     private void Awake() 
     {
         characterController = GetComponent<CharacterController>();    
+        Instance = this;
     }
     private void Update() 
     {
@@ -45,6 +47,18 @@ public class PlayerMovementController : MonoBehaviour
         {
             gravityVelocity += gravity * gravityMultiplier * Time.deltaTime;
             moveVector.y = gravityVelocity;
+        }
+    }
+    
+    public Vector3 GetMoveVector()
+    {
+        return moveVector;
+    }
+    public void CollectCoin(int coinValue)
+    {
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.AddCoin(coinValue);
         }
     }
 

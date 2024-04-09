@@ -4093,6 +4093,7 @@ Transform:
   - {fileID: 9005994187899226407}
   - {fileID: 1615024038539076452}
   - {fileID: 9005994189794336266}
+  - {fileID: 1194582382611026790}
   m_Father: {fileID: 8459580909872155766}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4124,6 +4125,9 @@ MonoBehaviour:
   bakeryText: {fileID: 9005994188694677856}
   maxStoredProductCount: 15
   productType: 0
+  CoinTransform: {fileID: 1194582382611026790}
+  CoinPrefab: {fileID: 611295990024109462, guid: 09ad4946538a5224a9d5682aa69f7d14, type: 3}
+  productionDuration: 1
 --- !u!1 &9005994189794336267
 GameObject:
   m_ObjectHideFlags: 0
@@ -4688,3 +4692,34 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -3577518859123135851, guid: 4e055de691b22e64babedae7b4399c5e, type: 3}
+--- !u!1 &9201811914262630370
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1194582382611026790}
+  m_Layer: 0
+  m_Name: CoinPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1194582382611026790
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9201811914262630370}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.12, y: 1.247, z: 4.511}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 9005994189786065952}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
