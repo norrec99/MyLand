@@ -20,4 +20,26 @@ public class UnlockBakeryUnitController : MonoBehaviour
     {
         bakeryText.text = storedProductCount + "/" + maxStoredProductCount;
     }
+    private void IncreaseStoredProductCount()
+    {
+        storedProductCount++;
+    }
+
+    public bool CanStoreProduct()
+    {
+        if (storedProductCount == maxStoredProductCount)
+        {
+            return false;
+        }
+        else
+        {
+            IncreaseStoredProductCount();
+            DisplayProductCount();
+            return true;
+        }
+    }
+    public ProductType GetProductType()
+    {
+        return productType;
+    }
 }

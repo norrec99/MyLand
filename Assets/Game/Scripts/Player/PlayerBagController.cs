@@ -28,6 +28,24 @@ public class PlayerBagController : MonoBehaviour
 
             ControlBagSize();
         }
+        if (other.CompareTag("UnlockBakeryUnit"))
+        {
+            for (int i = productDataList.Count - 1; i >= 0; i--)
+            {
+                UnlockBakeryUnitController unlockBakeryUnitController = other.GetComponent<UnlockBakeryUnitController>();
+                ProductType neededProductType = unlockBakeryUnitController.GetProductType();
+                if (neededProductType == productDataList[i].productType)
+                {
+                    if (unlockBakeryUnitController.CanStoreProduct())
+                    {
+                        Destroy(bag.transform.GetChild(i).gameObject);
+                        productDataList.RemoveAt(i);
+                    }
+                }
+            }
+            StartCoroutine(RearrangeBoxPositions());
+            ControlBagSize();
+        }
     }
 
     public void AddProductToBag(ProductData productData)
@@ -48,6 +66,15 @@ public class PlayerBagController : MonoBehaviour
         productDataList.Add(productData);
 
         ControlBagSize();
+    }
+    private IEnumerator RearrangeBoxPositions()
+    {
+        yield return new WaitForEndOfFrame();
+        for (int i = 0; i < bag.childCount; i++)
+        {
+            float newYPos = i * productSize.y;
+            bag.GetChild(i).localPosition = new Vector3(0, newYPos, 0);
+        }
     }
     private float CalculateNewYPositionOfBox()
     {
