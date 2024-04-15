@@ -403,7 +403,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1436863447}
   - component: {fileID: 1436863446}
-  - component: {fileID: 1436863445}
   - component: {fileID: 1436863448}
   m_Layer: 0
   m_Name: Main Camera
@@ -412,14 +411,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1436863445
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436863444}
-  m_Enabled: 1
 --- !u!20 &1436863446
 Camera:
   m_ObjectHideFlags: 0
@@ -470,7 +461,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1436863444}
-  m_LocalRotation: {x: 0.42415538, y: 0.000000015581922, z: -0.0000000072981816, w: 0.90558946}
+  m_LocalRotation: {x: 0.42415538, y: -0.00000001558191, z: 0.0000000072981776, w: 0.90558946}
   m_LocalPosition: {x: 0, y: 12, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -609,6 +600,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 49b38c0dcf5b18e42a2939f57bfdbfc6, type: 3}
+--- !u!1001 &769087402504792233
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1755635715949166725, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3234629532524659303, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
+      propertyPath: m_Name
+      value: SoundController
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c9746bbe98dc8004ba38f3007d021057, type: 3}
 --- !u!1001 &887288461128057065
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -787,6 +835,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2680881122846609259, guid: a87d86cba5f0ce348b62660e5ec72bac, type: 3}
+      propertyPath: ID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2680881122846609259, guid: a87d86cba5f0ce348b62660e5ec72bac, type: 3}
+      propertyPath: price
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 3993608079740150306, guid: a87d86cba5f0ce348b62660e5ec72bac, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -901,6 +957,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1416710590502632655, guid: 364de244089b811459b00557fae337d3, type: 3}
+      propertyPath: ID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1416710590502632655, guid: 364de244089b811459b00557fae337d3, type: 3}
+      propertyPath: price
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5379677415867270217, guid: 364de244089b811459b00557fae337d3, type: 3}
       propertyPath: m_RootOrder
       value: 12
@@ -960,11 +1024,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6255164233581209395, guid: 967434eb2198b614e90104e4cd52daed, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000000015581922
+      value: -0.00000001558191
       objectReference: {fileID: 0}
     - target: {fileID: 6255164233581209395, guid: 967434eb2198b614e90104e4cd52daed, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0000000072981816
+      value: 0.0000000072981776
       objectReference: {fileID: 0}
     - target: {fileID: 6255164233620575296, guid: 967434eb2198b614e90104e4cd52daed, type: 3}
       propertyPath: joystickController
@@ -1070,6 +1134,14 @@ PrefabInstance:
     - target: {fileID: 8459580909872155766, guid: 5d9c47374fd994745bfefe6bcada517a, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005994188978152928, guid: 5d9c47374fd994745bfefe6bcada517a, type: 3}
+      propertyPath: ID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 9005994188978152928, guid: 5d9c47374fd994745bfefe6bcada517a, type: 3}
+      propertyPath: price
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 9092108665781704396, guid: 5d9c47374fd994745bfefe6bcada517a, type: 3}
       propertyPath: m_Name

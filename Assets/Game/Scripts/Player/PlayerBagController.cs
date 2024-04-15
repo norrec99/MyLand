@@ -16,6 +16,7 @@ public class PlayerBagController : MonoBehaviour
     {
         if (other.CompareTag("ShopPoint"))
         {
+            PlaySound();
             for (int i = productDataList.Count - 1; i >= 0; i--)
             {
                 if (GameManager.Instance != null)
@@ -102,6 +103,13 @@ public class PlayerBagController : MonoBehaviour
     private void ToggleMaxText(bool toggle)
     {
         maxText.gameObject.SetActive(toggle);
+    }
+    private void PlaySound()
+    {
+        if (productDataList.Count > 0)
+        {
+            SoundController.Instance.PlaySingleSound(SoundType.Sell);
+        }
     }
     public bool IsEmptySpace()
     {

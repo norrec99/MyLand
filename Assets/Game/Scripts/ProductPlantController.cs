@@ -24,6 +24,7 @@ public class ProductPlantController : MonoBehaviour
             playerBagController = other.GetComponent<PlayerBagController>();
             if (playerBagController.IsEmptySpace())
             {
+                SoundController.Instance.PlaySingleSound(SoundType.Grab);
                 playerBagController.AddProductToBag(productData);
                 StartCoroutine(HarvestProduct());
             }
