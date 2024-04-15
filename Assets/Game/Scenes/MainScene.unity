@@ -6010,6 +6010,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TomatoLockedField
       objectReference: {fileID: 0}
+    - target: {fileID: 5379677415867270222, guid: 364de244089b811459b00557fae337d3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 364de244089b811459b00557fae337d3, type: 3}
 --- !u!1001 &6255164233409183131
