@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using System;
 
 public class PlayerBagController : MonoBehaviour
 {
@@ -10,7 +11,13 @@ public class PlayerBagController : MonoBehaviour
 
     private int maxBagSize = 5;
     private Vector3 productSize;
+    private string maxBagSizeKey = "MaxBagSizeKey";
     public List<ProductData> productDataList = new List<ProductData>();
+
+    private void Start() 
+    {
+        maxBagSize = LoadBagCapacity();
+    }
 
     private void OnTriggerEnter(Collider other) 
     {
@@ -114,5 +121,20 @@ public class PlayerBagController : MonoBehaviour
     public bool IsEmptySpace()
     {
         return productDataList.Count < maxBagSize;
+    }
+
+    public void AddPowerUp(int value)
+    {
+        maxBagSize += value;
+        SaveBagCapacity();
+        ControlBagSize();
+    }
+    private void SaveBagCapacity()
+    {
+        PlayerPrefs.SetInt(maxBagSizeKey, maxBagSize);
+    }
+    private int LoadBagCapacity()
+    {
+        return PlayerPrefs.GetInt(maxBagSizeKey, maxBagSize);
     }
 }
