@@ -21,7 +21,8 @@ public class GameManager : MonoBehaviour
             return totalCoinAmount;
         }
     }
-
+    
+    private string KeyTotalCoin = "TotalCoin";
     public Action OnCoinChangedAction;
 
     private void Awake() 
@@ -38,6 +39,11 @@ public class GameManager : MonoBehaviour
             DontDestroyOnLoad(gameObject);
         }
     }
+    private void Start()
+    {
+        LoadGame();
+        AddCoin(0);
+    }
     public void AddCoin(int coinAmount)
     {
         totalCoinAmount += coinAmount;
@@ -45,5 +51,17 @@ public class GameManager : MonoBehaviour
         {
             OnCoinChangedAction();
         }
+        SaveGame();
+    }
+
+    private void SaveGame()
+    {
+        // Save game data
+        PlayerPrefs.SetInt(KeyTotalCoin, totalCoinAmount);
+    }
+    private void LoadGame()
+    {
+        // Load game data
+        totalCoinAmount = PlayerPrefs.GetInt(KeyTotalCoin, 0);
     }
 }
